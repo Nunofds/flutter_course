@@ -5,18 +5,24 @@ void main() {
   runApp(const MyApp());
 }
 
+/// Main class of the application.
+///
+/// This class extends [StatelessWidget] and represents the
+/// entry point of the Flutter application. It configures the theme,
+/// title and navigation structure of the application.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  final String titleApp = "Tickets App";
+  //// Application title displayed in the AppBar
+  final String _titleApp = "Tickets App";
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: titleApp,
+      title: _titleApp,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
         useMaterial3: true,
       ),
       home: const BottomNavBar(),
